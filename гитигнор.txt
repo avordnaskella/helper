@@ -1,0 +1,22 @@
+# Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Тесты
+TestResults/
+*.trx
+*.coverage
+
+# CI/CD
+.github/workflows/*.bak
+*.log
+
+# NuGet
+packages/
+
+# Системные
+.DS_Store
+Thumbs.db
