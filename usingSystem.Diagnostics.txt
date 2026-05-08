@@ -1,0 +1,18 @@
+using System.Diagnostics;
+
+Trace.Listeners.Add(new ConsoleTraceListener());
+Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));
+Trace.AutoFlush = true;
+
+Trace.WriteLine("Программа запущена", "Инфо");
+var calc = new Class1();
+int a = 10, b = 5;
+Console.WriteLine($"10 + 5 = {calc.Add(a, b)}");
+Trace.WriteLine("Add вызван", "Калькулятор");
+
+
+Trace.WriteLineIf(b == 0, "Деление на ноль!", "Ошибка");
+Trace.WriteLineIf(b != 0, "Делитель корректен", "Проверка");
+
+Debugger.Break(); // программа остановится здесь, откроется окно отладки VS
+Trace.WriteLine("Программа завершена", "Инфо");
