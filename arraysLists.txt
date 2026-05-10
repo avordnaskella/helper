@@ -29,6 +29,8 @@ list.Add(6);
 list.Add(7);
 
 List<string> names = new List<string> { "Яша", "Миша", "Ариша"};
+List<string> names2 = new List<string> { "Яша", "Ариша" };
+
 int countEl = list.Count;
 
 list.Insert(1, 66); //на позицию 1
@@ -45,3 +47,12 @@ foreach (string i in names)
 }
 
 int maxEl = list.Max();
+
+var equals = names.SequenceEqual(names2); //сравнение
+Console.WriteLine(equals);
+
+var together = names.Intersect(names2).ToList(); // нахождение общих а Except различия
+foreach (string i in together)
+{
+    Console.WriteLine(i);
+}
