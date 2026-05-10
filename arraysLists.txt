@@ -1,0 +1,47 @@
+int[] numbers = new int[5];
+int[] num = { 3, 2, 6 };
+
+int len = num.Length;
+
+int[] randomMass = new int[5];
+Random random = new Random();
+numbers[0] = random.Next(1,100);
+numbers.Append(2);
+
+
+foreach (int i in num)
+{
+    Console.WriteLine(i);
+}
+
+//поиск индекса
+
+int index = Array.IndexOf(num, 6);
+
+Array.Sort(num);
+Array.Reverse(num);
+
+//Списки
+
+List<int> list  = new List<int>();
+list.Add(5);
+list.Add(6);
+list.Add(7);
+
+List<string> names = new List<string> { "Яша", "Миша", "Ариша"};
+int countEl = list.Count;
+
+list.Insert(1, 66); //на позицию 1
+list.Remove(5); //удалит первую 5
+list.RemoveAt(0); // по индексу
+
+list.IndexOf(7);
+
+names.Sort();
+names.Reverse();
+foreach (string i in names)
+{
+    Console.WriteLine(i);
+}
+
+int maxEl = list.Max();
